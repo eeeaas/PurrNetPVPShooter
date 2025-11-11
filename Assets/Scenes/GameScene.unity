@@ -7664,7 +7664,7 @@ GameObject:
   - component: {fileID: 539934871}
   - component: {fileID: 539934867}
   - component: {fileID: 539934869}
-  - component: {fileID: 539934870}
+  - component: {fileID: 539934872}
   m_Layer: 0
   m_Name: PurrNet
   m_TagString: Untagged
@@ -7779,18 +7779,6 @@ MonoBehaviour:
   _displayTarget: 6
   fontSize: 16
   textColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &539934870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539934862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c476fd9733ed148b4631bd99c76108, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PurrNetLobbySetup::PurrLobby.ConnectionStarter
 --- !u!114 &539934871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7807,6 +7795,18 @@ MonoBehaviour:
   _dedicatedServer: 0
   _peerToPeer: 1
   _address: 127.0.0.1
+--- !u!114 &539934872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539934862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c476fd9733ed148b4631bd99c76108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PurrNetLobbySetup::PurrLobby.ConnectionStarter
 --- !u!1 &542904880
 GameObject:
   m_ObjectHideFlags: 0
