@@ -11,7 +11,7 @@ public class RotationMimic : NetworkBehaviour {
         enabled = isOwner;
     }
 
-    private void Update() {
+    private void LateUpdate() {
         if (!mimicObject) return;
         transform.rotation = mimicObject.rotation;
     }

@@ -30,29 +30,31 @@ MonoBehaviour:
           iconNameOrGuid: Settings Icon
           isIconRecursive: 1
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: PreMatCube
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: PreMatSphere
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: PreMatCylinder
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: PreMatQuad
           isIconRecursive: 0
           isColorRecursive: 0
-        - colorIndex: 1
+        - colorIndex: 2
           iconNameOrGuid: Favorite
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []
-  bookmarkedScenePaths: []
+  bookmarkedScenePaths:
+  - Assets/Scenes/GameScene.unity
+  - Assets/PurrLobby/LobbyScenes/LobbySample.unity

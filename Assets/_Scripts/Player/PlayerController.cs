@@ -19,13 +19,19 @@ public class PlayerController : NetworkBehaviour
     [Header("Look Settings")]
     [SerializeField] private float lookSensitivity = 2f;
     [SerializeField] private float maxLookAngle = 80f;
+    
+    public float LookSensitivity { get => lookSensitivity;
+        set { lookSensitivity = value;  }
+    }
 
     [Header("References")]
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private NetworkAnimator animator;
     [SerializeField] private List<Renderer> renderers = new();
+    [SerializeField] private List<Renderer> renderersToOthers = new();
     [SerializeField] private StateMachine stateMachine;
     [SerializeField] private List<StateNode> weaponStates = new();
+    [SerializeField] private RecoilCamera recoilCamera;
     
     private CharacterController characterController;
     private Vector3 velocity;
@@ -39,6 +45,14 @@ public class PlayerController : NetworkBehaviour
         if (isOwner) {
             foreach (var render in renderers) {
                 render.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
+                
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+        }
+        else {
+            foreach (var render in renderersToOthers) {
+                render.shadowCastingMode = ShadowCastingMode.ShadowsOnly;
             }
         }
     }
@@ -51,8 +65,6 @@ public class PlayerController : NetworkBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         characterController = GetComponent<CharacterController>();
 
         if (playerCamera == null)
@@ -105,18 +117,27 @@ public class PlayerController : NetworkBehaviour
 
         verticalRotation -= mouseY;
         verticalRotation = Mathf.Clamp(verticalRotation, -maxLookAngle, maxLookAngle);
-        playerCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-
+        
+        Vector2 recoilAngles = Vector2.zero;
+        
+        if (playerCamera.TryGetComponent(out RecoilCamera recoilCam))
+        {
+            recoilAngles = recoilCam.GetRecoilAngles(); // <-- новый метод
+        }
+        recoilCamera.transform.localRotation =
+            Quaternion.Euler(verticalRotation - recoilAngles.y, recoilAngles.x, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
     
     private void HandleWeaponSwitching() {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
             stateMachine.SetState(weaponStates[0]);
+            recoilCamera.SetGun(weaponStates[0].GetComponent<Gun>());
+        }
         if (Input.GetKeyDown(KeyCode.Alpha2)) {
             stateMachine.SetState(weaponStates[1]);
+            recoilCamera.SetGun(weaponStates[1].GetComponent<Gun>());
         }
-
     }
 
     private bool IsGrounded()

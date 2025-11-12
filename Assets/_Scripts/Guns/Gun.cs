@@ -17,6 +17,10 @@ public class Gun : StateNode {
     [SerializeField] private AnimationCurve recoilCurve;
     [SerializeField] private float rotationAmount = 25f;
     [SerializeField] private AnimationCurve rotationCurve;
+    [SerializeField] public float yRecoilStrength = 5f;
+    [SerializeField] public float xRecoilStrength = 5f;
+    
+    [SerializeField] public float recoilResetDelay = 0.2f;
     
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
@@ -26,11 +30,20 @@ public class Gun : StateNode {
     [SerializeField] private Transform rightIkTarget, leftIkTarget;
     [SerializeField] private List<Renderer> renderers = new();
     [SerializeField] private ParticleSystem environmentHitEffect, playerHitEffect;
+    [SerializeField] private GameObject environmentHitObj;
+    [SerializeField] private RotationMimic rotationMimic;
+    [SerializeField] private Transform bodyTransform;
+    
+    [Header("Recoil Pattern (per shot offset X/Y)")]
+    public Vector2[] recoilPattern;
+    public int FromRecoilIndex = 8;
     
     private float _lastFireTime;
     private Vector3 _originalPosition;
     private Quaternion _originalRotation;
     private Coroutine _recoilRoutine;
+
+    public bool isShoting;
 
     private void Awake() {
         ToggleVisuals(false);
@@ -47,8 +60,8 @@ public class Gun : StateNode {
     }
 
     private void Start() {
-        _originalPosition = transform.localPosition;
-        _originalRotation = transform.localRotation;
+        _originalPosition = bodyTransform.localPosition;
+        _originalRotation = bodyTransform.localRotation;
     }
 
     private void ToggleVisuals(bool toggle) {
@@ -63,17 +76,19 @@ public class Gun : StateNode {
         SetIKTargets();
 
         if (!isOwner) return;
-        
-        if(automatic && !Input.GetKey(KeyCode.Mouse0) || !automatic && !Input.GetMouseButtonDown(0))
+
+        if (automatic && !Input.GetKey(KeyCode.Mouse0) || !automatic && !Input.GetMouseButtonDown(0)) {
+            isShoting = false;
             return;
-        
+        }
         if (_lastFireTime + fireRate > Time.unscaledTime)
             return;
-        
+        isShoting = true;
         PlayShotEffect();
         _lastFireTime = Time.unscaledTime;
         
-        if (!Physics.Raycast(cameraTransform.position, cameraTransform.forward, out var hit, range, hitLayer))
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        if (!Physics.Raycast(ray, out var hit, range, hitLayer))
             return;
 
         if (!hit.transform.TryGetComponent(out PlayerHealth playerHealth)) {
@@ -97,6 +112,7 @@ public class Gun : StateNode {
     private void EnvironmentHit(Vector3 position, Vector3 normal) {
         if (environmentHitEffect) {
             Instantiate(environmentHitEffect, position, Quaternion.LookRotation(normal));
+            Instantiate(environmentHitObj, position, Quaternion.LookRotation(normal));
         }
     }
     
@@ -125,17 +141,16 @@ public class Gun : StateNode {
             //Position recoil
             float recoilValue = recoilCurve.Evaluate(curveTime);
             Vector3 recoilOffset = Vector3.back * (recoilValue * recoilStrength);
-            transform.localPosition = _originalPosition + recoilOffset;
+            bodyTransform.localPosition = _originalPosition + recoilOffset;
             
             //Rotation recoil
             float rotationValue = rotationCurve.Evaluate(curveTime);
             Vector3 rotationOffset = new Vector3(rotationValue * rotationAmount, 0f, 0f);
-            transform.localRotation = _originalRotation * Quaternion.Euler(rotationOffset);
+            bodyTransform.localRotation = _originalRotation * Quaternion.Euler(rotationOffset);
             
             yield return null;
         }
-        
-        transform.localPosition = _originalPosition;
-        transform.localRotation = _originalRotation;
+        bodyTransform.localPosition = _originalPosition;
+        bodyTransform.localRotation = _originalRotation;
     }
 }
