@@ -57,19 +57,19 @@ public class ConnectionStarter : MonoBehaviour {
             StartFromLobby();
         }
         else {
-            StartNormal();
+            //StartNormal();
         }
         
         
     }
 
-    private void StartNormal() {
+    /*private void StartNormal() {
         _networkManager.transport = _udpTransport;
 
         if (!ParrelSync.ClonesManager.IsClone())
             _networkManager.StartServer();
         _networkManager.StartClient();
-    }
+    }*/
 
     private void StartFromLobby() {
         

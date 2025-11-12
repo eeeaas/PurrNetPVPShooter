@@ -7804,9 +7804,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 539934862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c476fd9733ed148b4631bd99c76108, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b2474a6a6d353441b8f4edf6b7f95b7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: PurrNetLobbySetup::PurrLobby.ConnectionStarter
+  m_EditorClassIdentifier: Assembly-CSharp::ConnectionStarter
 --- !u!1 &542904880
 GameObject:
   m_ObjectHideFlags: 0
