@@ -15,8 +15,8 @@ public class EndGameView : View {
         InstanceHandler.UnregisterInstance<EndGameView>();
     }
 
-    public void SetWinner(PlayerID winner) {
-        winnerText.text = $"Player {winner.id} wins the game!";
+    public void SetWinner(TeamID winner) {
+        winnerText.text = $"{winner} wins the game!";
     }
 
     public override void OnShow() {

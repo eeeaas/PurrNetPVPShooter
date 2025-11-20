@@ -1,0 +1,900 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8184716370978945019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerSteps_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/PlayerSteps_2D
+  Guid:
+    Data1: 2001819142
+    Data2: 1321364769
+    Data3: -1917455185
+    Data4: 471229488
+  Banks:
+  - {fileID: -4384936709415548397}
+  - {fileID: 3185923887069084073}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6897289539556636827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns3D/Knife_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns3D/Knife_3D
+  Guid:
+    Data1: 2004597419
+    Data2: 1327779726
+    Data3: 307345082
+    Data4: 548839350
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-6156717570268558751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/CompleteTrack/S_KnifeSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/CompleteTrack/S_KnifeSound
+  Guid:
+    Data1: -438095964
+    Data2: 1084926630
+    Data3: 1893385380
+    Data4: -1382365183
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 100
+--- !u!114 &-5422383100414974871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerStepsSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/PlayerStepsSound
+  Guid:
+    Data1: -2090227642
+    Data2: 1254735295
+    Data3: 1635058607
+    Data4: -316968727
+  Banks:
+  - {fileID: -4384936709415548397}
+  - {fileID: 3185923887069084073}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-4724190054169990593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/CompleteTrack/S_DeagleSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/CompleteTrack/S_DeagleSound
+  Guid:
+    Data1: 1948247201
+    Data2: 1157789449
+    Data3: 1885010833
+    Data4: -1047535171
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 100
+--- !u!114 &-4502431865874597516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Hits/BulletGroundHit_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Hits/BulletGroundHit_3D
+  Guid:
+    Data1: -596802610
+    Data2: 1092055798
+    Data3: 79402632
+    Data4: -1462157189
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-4384936709415548397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../../FmodProjects/sas/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 638989348835563463
+  FileSizes:
+  - Name: Desktop
+    Value: 342784
+  Exists: 1
+--- !u!114 &-3397142701109081628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Deaths_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Deaths_3D
+  Guid:
+    Data1: -737429723
+    Data2: 1161943195
+    Data3: 287547789
+    Data4: -1740406756
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-3157662311360997975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns3D/Ak_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns3D/Ak_3D
+  Guid:
+    Data1: 392809212
+    Data2: 1301442522
+    Data3: -1208108868
+    Data4: -526700038
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-3122326299645718729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Switchs/AkSwitch_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Switchs/AkSwitch_2D
+  Guid:
+    Data1: 1205543002
+    Data2: 1171701736
+    Data3: -701700456
+    Data4: -1377534492
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1925383885445706647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/JumpEnd_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/JumpEnd_3D
+  Guid:
+    Data1: -1282672681
+    Data2: 1080597691
+    Data3: -1703710785
+    Data4: 2106106476
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-1167516475854753955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Switchs/DeagleSwitch_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Switchs/DeagleSwitch_2D
+  Guid:
+    Data1: -1954178906
+    Data2: 1328830156
+    Data3: 248071328
+    Data4: 983186026
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-109774309482643033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Reloads/DeagleReload_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Reloads/DeagleReload_3D
+  Guid:
+    Data1: 1526039066
+    Data2: 1137044443
+    Data3: 1185840548
+    Data4: -1734649876
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 1117
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
+  EditorBanks:
+  - {fileID: 3993274492816202195}
+  - {fileID: 3185923887069084073}
+  - {fileID: -4384936709415548397}
+  - {fileID: 5451858834321698937}
+  EditorEvents:
+  - {fileID: -8184716370978945019}
+  - {fileID: 1276775948367706741}
+  - {fileID: 6877477548897579070}
+  - {fileID: 8280801820300025379}
+  - {fileID: -5422383100414974871}
+  - {fileID: 3907000301092105444}
+  - {fileID: 5010801675349136513}
+  - {fileID: -4724190054169990593}
+  - {fileID: -6156717570268558751}
+  - {fileID: -6897289539556636827}
+  - {fileID: 8762159540084798446}
+  - {fileID: 4639419283293223775}
+  - {fileID: -3157662311360997975}
+  - {fileID: -3397142701109081628}
+  - {fileID: 6329441910466105973}
+  - {fileID: 5904951118189321281}
+  - {fileID: 497707118345728589}
+  - {fileID: 6684334467679535552}
+  - {fileID: -4502431865874597516}
+  - {fileID: 8985413454411726447}
+  - {fileID: -1925383885445706647}
+  - {fileID: -3122326299645718729}
+  - {fileID: 6851209275591701008}
+  - {fileID: -1167516475854753955}
+  - {fileID: 2934894115764688885}
+  - {fileID: -109774309482643033}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3185923887069084073}
+  StringsBanks:
+  - {fileID: 3993274492816202195}
+  cacheVersion: 131856
+  cacheTime: 638990998920950670
+  SerializableEventsDict:
+  - key: event:/Player/PlayerSteps_2D
+    index: 0
+  - key: event:/Guns/Guns2D/Deagle_2D
+    index: 1
+  - key: event:/Guns/Guns3D/Deagle_3D
+    index: 2
+  - key: event:/Guns/CompleteTrack/S_Ak47Sound
+    index: 3
+  - key: event:/Player/PlayerStepsSound
+    index: 4
+  - key: event:/Guns/Guns2D/Ak_2D
+    index: 5
+  - key: event:/Player/PlayerSteps_3D
+    index: 6
+  - key: event:/Guns/CompleteTrack/S_DeagleSound
+    index: 7
+  - key: event:/Guns/CompleteTrack/S_KnifeSound
+    index: 8
+  - key: event:/Guns/Guns3D/Knife_3D
+    index: 9
+  - key: event:/Misc/Ambience
+    index: 10
+  - key: event:/Guns/Guns2D/Knife_2D
+    index: 11
+  - key: event:/Guns/Guns3D/Ak_3D
+    index: 12
+  - key: event:/Player/Deaths_3D
+    index: 13
+  - key: event:/Player/Hits/HeadShots_2D
+    index: 14
+  - key: event:/Player/Hits/HeadShots_3D
+    index: 15
+  - key: event:/Player/Hits/BodyHits_3D
+    index: 16
+  - key: event:/Guns/Hits/KnifeGroundHit_3D
+    index: 17
+  - key: event:/Guns/Hits/BulletGroundHit_3D
+    index: 18
+  - key: event:/Player/JumpStart_3D
+    index: 19
+  - key: event:/Player/JumpEnd_3D
+    index: 20
+  - key: event:/Guns/Switchs/AkSwitch_2D
+    index: 21
+  - key: event:/Guns/Switchs/KnifeSwitch_2D
+    index: 22
+  - key: event:/Guns/Switchs/DeagleSwitch_2D
+    index: 23
+  - key: event:/Guns/Reloads/AkReload_3D
+    index: 24
+  - key: event:/Guns/Reloads/DeagleReload_3D
+    index: 25
+--- !u!114 &497707118345728589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Hits/BodyHits_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Hits/BodyHits_3D
+  Guid:
+    Data1: -408480674
+    Data2: 1079552504
+    Data3: 1470069153
+    Data4: 1764575826
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &1276775948367706741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns2D/Deagle_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns2D/Deagle_2D
+  Guid:
+    Data1: 510974224
+    Data2: 1332027283
+    Data3: 402950555
+    Data4: -1554731647
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2934894115764688885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Reloads/AkReload_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Reloads/AkReload_3D
+  Guid:
+    Data1: -1296629945
+    Data2: 1203721851
+    Data3: 1151100569
+    Data4: 1087524597
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 1410
+--- !u!114 &3185923887069084073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../../FmodProjects/sas/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638990927174357814
+  FileSizes:
+  - Name: Desktop
+    Value: 2758656
+  Exists: 1
+--- !u!114 &3907000301092105444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns2D/Ak_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns2D/Ak_2D
+  Guid:
+    Data1: 1993531474
+    Data2: 1197294270
+    Data3: 1574302088
+    Data4: 589801359
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3993274492816202195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../../FmodProjects/sas/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638990927174357814
+  FileSizes:
+  - Name: Desktop
+    Value: 2178
+  Exists: 1
+--- !u!114 &4639419283293223775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns2D/Knife_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns2D/Knife_2D
+  Guid:
+    Data1: 47756787
+    Data2: 1157412962
+    Data3: -1198408563
+    Data4: 1237964208
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5010801675349136513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/PlayerSteps_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/PlayerSteps_3D
+  Guid:
+    Data1: -1427797898
+    Data2: 1306917400
+    Data3: -491613262
+    Data4: -2027670254
+  Banks:
+  - {fileID: -4384936709415548397}
+  - {fileID: 3185923887069084073}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &5451858834321698937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Weapons.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: ../../../FmodProjects/sas/Build/Desktop/Weapons.bank
+  Name: Weapons
+  StudioPath: bank:/Weapons
+  lastModified: 638990998920950670
+  FileSizes:
+  - Name: Desktop
+    Value: 336320
+  Exists: 1
+--- !u!114 &5904951118189321281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Hits/HeadShots_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Hits/HeadShots_3D
+  Guid:
+    Data1: -1361833382
+    Data2: 1112845968
+    Data3: 271648187
+    Data4: 1407360239
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &6329441910466105973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Hits/HeadShots_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/Hits/HeadShots_2D
+  Guid:
+    Data1: -1960611779
+    Data2: 1078079036
+    Data3: 1483281819
+    Data4: -1975320904
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6684334467679535552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Hits/KnifeGroundHit_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Hits/KnifeGroundHit_3D
+  Guid:
+    Data1: -1782517212
+    Data2: 1255779819
+    Data3: -948669277
+    Data4: -1179310331
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &6851209275591701008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Switchs/KnifeSwitch_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Switchs/KnifeSwitch_2D
+  Guid:
+    Data1: -842022270
+    Data2: 1083774664
+    Data3: 2019831684
+    Data4: 284557277
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6877477548897579070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns3D/Deagle_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns3D/Deagle_3D
+  Guid:
+    Data1: -655235549
+    Data2: 1298250733
+    Data3: 1167624066
+    Data4: -623366356
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &8280801820300025379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/CompleteTrack/S_Ak47Sound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/CompleteTrack/S_Ak47Sound
+  Guid:
+    Data1: -1021299396
+    Data2: 1080538189
+    Data3: -341485172
+    Data4: 425883950
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &8762159540084798446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Ambience
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Misc/Ambience
+  Guid:
+    Data1: 242150355
+    Data2: 1256681697
+    Data3: 1490019243
+    Data4: -1569204470
+  Banks:
+  - {fileID: 3185923887069084073}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 10
+  MaxDistance: 250
+  Length: 202536
+--- !u!114 &8985413454411726447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/JumpStart_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Player/JumpStart_3D
+  Guid:
+    Data1: 396356353
+    Data2: 1240631573
+    Data3: 608420766
+    Data4: -1449246945
+  Banks:
+  - {fileID: -4384936709415548397}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0

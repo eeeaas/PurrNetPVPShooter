@@ -102,6 +102,19 @@ namespace PurrLobby
         {
             ShowView<MainMenuView>();
         }
+        
+        public void OnIPConnectClicked()
+        {
+            ShowView<IPConnectView>();
+        }
+
+        public void OnButtonLeaveClicked() {
+            ShowView<MainMenuView>();
+        }
+
+        public void OnHostClicked() {
+            ShowView<HostPanelView>();
+        }
 
         #endregion
     }

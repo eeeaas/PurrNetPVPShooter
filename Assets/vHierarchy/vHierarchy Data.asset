@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneDatas_byGuid:
     keys:
     - 99c9720ab356a0642a771bea13969a05
+    - e5d8432c4bee5404eb37c0b920d383fb
     values:
     - goDatas_byGlobalId:
         keys:
@@ -25,6 +26,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-745617469-0
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1533244199-0
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-761499343-0
+        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1434302124-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Settings Icon
@@ -54,7 +56,55 @@ MonoBehaviour:
           iconNameOrGuid: Favorite
           isIconRecursive: 0
           isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-2079214614-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-1290704872-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-637617413-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-1298518665-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-745617469-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-1533244199-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-761499343-0
+        - globalObjectIdString: GlobalObjectId_V1-2-e5d8432c4bee5404eb37c0b920d383fb-1434302124-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatCube
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatSphere
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatCylinder
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatQuad
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: Favorite
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
   bookmarks: []
   bookmarkedScenePaths:
-  - Assets/Scenes/GameScene.unity
   - Assets/PurrLobby/LobbyScenes/LobbySample.unity
+  - Assets/Scenes/Dust2.unity
+  - Assets/Scenes/Office.unity

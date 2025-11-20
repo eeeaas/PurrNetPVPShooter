@@ -14,7 +14,7 @@ public class ConnectionStarter : MonoBehaviour {
     private NetworkManager _networkManager;
     private LobbyDataHolder _lobbyDataHolder;
 
-    private bool _isFromLobby;
+    private bool _isFromLobby = false;
     
     private void Awake()
     {
@@ -59,17 +59,15 @@ public class ConnectionStarter : MonoBehaviour {
         else {
             //StartNormal();
         }
-        
-        
     }
 
-    /*private void StartNormal() {
-        _networkManager.transport = _udpTransport;
+    //private void StartNormal() {
+        //_networkManager.transport = _udpTransport;
 
-        if (!ParrelSync.ClonesManager.IsClone())
-            _networkManager.StartServer();
-        _networkManager.StartClient();
-    }*/
+        //if (!ParrelSync.ClonesManager.IsClone())
+        //    _networkManager.StartServer();
+        //_networkManager.StartClient();
+    //}
 
     private void StartFromLobby() {
         

@@ -57,7 +57,6 @@ public class RecoilCamera : MonoBehaviour
         if (recoilTarget.magnitude < 0.2f) {
             //recoilIndex = 0;
             //recoilTarget = Vector2.zero;
-            Debug.Log("im zero");
         }
     }
     
