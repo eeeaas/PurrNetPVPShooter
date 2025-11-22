@@ -5,6 +5,7 @@ using FMODUnity;
 using Fragsurf.Movement;
 using PurrNet;
 using PurrNet.StateMachine;
+using Unity.Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +19,15 @@ public class Gun : StateNode {
     [SerializeField] public int gunIdForAnim;
     
     [SerializeField] public bool isKnife = false;
+    [SerializeField] public bool isZoomable = false;
+    [SerializeField] public bool blockShoot;
+    
+    [SerializeField] private bool inZoom;
+    [SerializeField] private bool blockZoom;
+    [SerializeField] private int zoomStage = 0;
+
+    [SerializeField] private GameObject AWPZoomCanvas;
+    [SerializeField] private CinemachineCamera Camera;
 
     [SerializeField] private float headScale = 5f, bodyScale = 1f, armScale = 0.5f, legScale = 0.25f;
     
@@ -134,6 +144,29 @@ public class Gun : StateNode {
             renderer.enabled = toggle;
         }
     }
+
+    public void EnableAWPZoom() {
+        playerController.SetSensitivityMultipluier(0.5f);
+        inZoom = true;
+        AWPZoomCanvas.SetActive(true);
+        ToggleVisuals(false);
+        if(!InstanceHandler.TryGetInstance(out GameViewManager gameViewManager)) return;
+        gameViewManager.HideView<MainGameView>();
+        gameViewManager.HideView<SettingsView>();
+    }
+
+    public void DisableAWPZoom() {
+        if (!isZoomable) 
+            return;
+        inZoom = false;
+        AWPZoomCanvas.SetActive(false);
+        Camera.Lens.FieldOfView = 68f;
+        playerController.SetSensitivityMultipluier(1f);
+        Debug.Log("AWP Zoom Disabled");
+        zoomStage = 0;
+        if(!InstanceHandler.TryGetInstance(out GameViewManager gameViewManager)) return;
+        gameViewManager.ShowView<MainGameView>(false);
+    }
     
     Vector3 GetSpreadDirection(Vector3 forward, float spreadAngleDeg) {
         Vector3 random = Random.insideUnitSphere * Mathf.Tan(spreadAngleDeg * Mathf.Deg2Rad);
@@ -148,11 +181,31 @@ public class Gun : StateNode {
         isDrawingWeapon = playerController.isDrawingWeapon;
         if (!isOwner) return;
         if (playerController.uiIsOpen || isDrawingWeapon) return;
+        if (blockShoot) return;
         if (!isKnife) {
             ShotGunsUpdate();
         }
         else {
             KnifeUpdate();
+        }
+    }
+
+    private void Update() {
+        if (isZoomable && playerController.GetCurrentWeapon() == this) {
+            if (Input.GetKeyDown(KeyCode.Mouse1) && !inZoom && !blockZoom || Input.GetKeyDown(KeyCode.Mouse1) && zoomStage == 1 && !blockZoom) {
+                zoomStage++;
+                if (zoomStage == 1) {
+                    EnableAWPZoom();
+                    Camera.Lens.FieldOfView = 20f;
+                }else if (zoomStage == 2) {
+                    playerController.SetSensitivityMultipluier(0.25f);
+                    Camera.Lens.FieldOfView = 10f;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1) && inZoom && zoomStage == 2) {
+                DisableAWPZoom();
+                ToggleVisuals(true);
+            }
         }
     }
 
@@ -277,13 +330,24 @@ public class Gun : StateNode {
         }
 
         if (primaryIsZero) return;
+        
+        if (_lastFireTime + fireRate > Time.unscaledTime) {
+            blockZoom = true;
+        }
+        else {
+            blockZoom = false;
+        }
+        
         if (automatic && !Input.GetKey(KeyCode.Mouse0) || !automatic && !Input.GetMouseButtonDown(0)) {
             isShoting = false;
             return;
         }
+
         if (_lastFireTime + fireRate > Time.unscaledTime)
             return;
+        
         isShoting = true;
+        
         weaponAnimator.Play("Idle", 0, 0f); // или любая базовая/нулевая анимация
         weaponAnimator.Update(0f);   
         weaponAnimator.enabled = false;
@@ -294,13 +358,17 @@ public class Gun : StateNode {
         float spread = 0f;
         
         Debug.Log(playerController.IsGrounded() + " " + surfController.moveDir.magnitude);
-        if (playerController.IsGrounded() && surfController.moveDir.magnitude < 0.1f) {
+        if (playerController.IsGrounded() && surfController.moveDir.magnitude < 0.1f && !isZoomable || playerController.IsGrounded() && surfController.moveDir.magnitude < 0.1f && isZoomable && inZoom) {
             spread = 0f;
         }
         else {
-            spread = 8f;
+            spread = Random.Range(0f, 8f);
         }
         
+        if (inZoom) {
+            DisableAWPZoom();
+            ToggleVisuals(true);
+        }
         Vector3 dir = GetSpreadDirection(cameraTransform.forward, spread);
         Ray ray = new Ray(cameraTransform.position + cameraTransform.forward * 0.5f, dir);
 
@@ -519,6 +587,9 @@ public class Gun : StateNode {
             case 1:
                 weaponAnimator.SetTrigger("T_RifleLook");
                 break;
+            case 3:
+                weaponAnimator.SetTrigger("T_AWPLook");
+                break;
         }
     }
     
@@ -534,6 +605,10 @@ public class Gun : StateNode {
             case 1:
                 weaponAnimator.SetTrigger("T_RifleReload");
                 PlayReloadSound(0);
+                break;
+            case 3:
+                weaponAnimator.SetTrigger("T_AWPReload");
+                PlayReloadSound(2);
                 break;
         }
     }

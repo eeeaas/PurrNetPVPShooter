@@ -26,10 +26,6 @@ public class IPConnectPanel : MonoBehaviour
         
         _connectButton.onClick.AddListener(OnConnectClicked);
         
-        // Значения по умолчанию
-        _ipInput.text = "127.0.0.1";
-        _portInput.text = "5000";
-        
         // Слушаем изменения состояния подключения
         _networkManager.onClientConnectionState += OnClientConnectionStateChanged;
     }

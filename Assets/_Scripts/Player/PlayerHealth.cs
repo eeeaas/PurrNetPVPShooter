@@ -22,7 +22,6 @@ public class PlayerHealth : NetworkBehaviour {
         
         //var actualLayer = isOwner ? selfLayer : otherLayer;
         //SetLayerRecursively(gameObject, actualLayer);
-
         if (isOwner) {
             InstanceHandler.GetInstance<MainGameView>().UpdateHealth(health.value);
             health.onChanged += OnHealthChanged;
@@ -61,7 +60,8 @@ public class PlayerHealth : NetworkBehaviour {
             }
             OnPlayerDeathRpc();
             PlayDeathEffects();
-            OnDeath_Server?.Invoke(owner.Value);
+            if(owner.HasValue)
+                OnDeath_Server?.Invoke(owner.Value);
             Destroy(gameObject);
         }
     }

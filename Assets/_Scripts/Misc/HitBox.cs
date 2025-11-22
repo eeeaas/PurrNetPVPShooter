@@ -6,4 +6,5 @@ public class Hitbox : MonoBehaviour
 {
     public HitZone hitZone;
     public PlayerHealth playerHealth;
+
 }

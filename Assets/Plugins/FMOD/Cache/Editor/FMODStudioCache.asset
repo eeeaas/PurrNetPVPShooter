@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8473085542015951640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Switchs/AWPSwitch_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Switchs/AWPSwitch_2D
+  Guid:
+    Data1: 1025942254
+    Data2: 1161123920
+    Data3: -83583865
+    Data4: 5427003
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8184716370978945019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +55,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6956783404057081432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/CompleteTrack/S_AWPSound
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/CompleteTrack/S_AWPSound
+  Guid:
+    Data1: 591049663
+    Data2: 1171217104
+    Data3: 425524641
+    Data4: -923082558
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5
 --- !u!114 &-6897289539556636827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,11 +237,39 @@ MonoBehaviour:
   Path: ../../../FmodProjects/sas/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638989348835563463
+  lastModified: 638993687907081438
   FileSizes:
   - Name: Desktop
     Value: 342784
   Exists: 1
+--- !u!114 &-3643636129681912705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns3D/AWP_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns3D/AWP_3D
+  Guid:
+    Data1: 1193959937
+    Data2: 1240052644
+    Data3: 1100374176
+    Data4: 285418600
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
 --- !u!114 &-3397142701109081628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +406,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-626912352161470433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Reloads/AWPReload_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Reloads/AWPReload_3D
+  Guid:
+    Data1: 1592128642
+    Data2: 1107105509
+    Data3: 1180209083
+    Data4: -395968621
+  Banks:
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 3367
 --- !u!114 &-109774309482643033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +459,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 60
-  Length: 1117
+  Length: 2191
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,13 +504,19 @@ MonoBehaviour:
   - {fileID: -1167516475854753955}
   - {fileID: 2934894115764688885}
   - {fileID: -109774309482643033}
+  - {fileID: -3643636129681912705}
+  - {fileID: 7100435478729366111}
+  - {fileID: -6956783404057081432}
+  - {fileID: -626912352161470433}
+  - {fileID: -8473085542015951640}
+  - {fileID: 8121546062584939047}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3185923887069084073}
   StringsBanks:
   - {fileID: 3993274492816202195}
   cacheVersion: 131856
-  cacheTime: 638990998920950670
+  cacheTime: 638993689842969838
   SerializableEventsDict:
   - key: event:/Player/PlayerSteps_2D
     index: 0
@@ -454,6 +570,16 @@ MonoBehaviour:
     index: 24
   - key: event:/Guns/Reloads/DeagleReload_3D
     index: 25
+  - key: event:/Guns/Guns3D/AWP_3D
+    index: 26
+  - key: event:/Guns/Guns2D/AWP_2D
+    index: 27
+  - key: event:/Guns/CompleteTrack/S_AWPSound
+    index: 28
+  - key: event:/Guns/Reloads/AWPReload_3D
+    index: 29
+  - key: event:/Guns/Switchs/AWPSwitch_2D
+    index: 30
 --- !u!114 &497707118345728589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +661,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 60
-  Length: 1410
+  Length: 2150
 --- !u!114 &3185923887069084073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,10 +677,10 @@ MonoBehaviour:
   Path: ../../../FmodProjects/sas/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638990927174357814
+  lastModified: 638993689842435077
   FileSizes:
   - Name: Desktop
-    Value: 2758656
+    Value: 2916384
   Exists: 1
 --- !u!114 &3907000301092105444
 MonoBehaviour:
@@ -599,10 +725,10 @@ MonoBehaviour:
   Path: ../../../FmodProjects/sas/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638990927174357814
+  lastModified: 638993689842435077
   FileSizes:
   - Name: Desktop
-    Value: 2178
+    Value: 2486
   Exists: 1
 --- !u!114 &4639419283293223775
 MonoBehaviour:
@@ -675,10 +801,10 @@ MonoBehaviour:
   Path: ../../../FmodProjects/sas/Build/Desktop/Weapons.bank
   Name: Weapons
   StudioPath: bank:/Weapons
-  lastModified: 638990998920950670
+  lastModified: 638993689842969838
   FileSizes:
   - Name: Desktop
-    Value: 336320
+    Value: 521472
   Exists: 1
 --- !u!114 &5904951118189321281
 MonoBehaviour:
@@ -815,6 +941,62 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 60
+  Length: 0
+--- !u!114 &7100435478729366111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns2D/AWP_2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns2D/AWP_2D
+  Guid:
+    Data1: 1970239930
+    Data2: 1082281136
+    Data3: 1205813170
+    Data4: 1990565294
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8121546062584939047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Guns/Guns3D/AWP_Distance_3D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Guns/Guns3D/AWP_Distance_3D
+  Guid:
+    Data1: 493049780
+    Data2: 1230975526
+    Data3: 449277598
+    Data4: 2071647115
+  Banks:
+  - {fileID: 3185923887069084073}
+  - {fileID: 5451858834321698937}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 60
+  MaxDistance: 2800
   Length: 0
 --- !u!114 &8280801820300025379
 MonoBehaviour:

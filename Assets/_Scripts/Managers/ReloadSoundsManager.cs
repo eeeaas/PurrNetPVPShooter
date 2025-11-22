@@ -6,9 +6,11 @@ public class ReloadSoundsManager : MonoBehaviour
 {
     [SerializeField] private EventReference _3D_akReload_eventRef;
     [SerializeField] private EventReference _3D_deagleReload_eventRef;
+    [SerializeField] private EventReference _3D_awpReload_eventRef;
 
     private EventInstance akReloadInstance;
     private EventInstance deagleReloadInstance;
+    private EventInstance awpReloadInstance;
     private EventInstance currentPlayingInstance;
 
     void Start()
@@ -16,6 +18,7 @@ public class ReloadSoundsManager : MonoBehaviour
         // Создаем экземпляры событий заранее
         akReloadInstance = RuntimeManager.CreateInstance(_3D_akReload_eventRef);
         deagleReloadInstance = RuntimeManager.CreateInstance(_3D_deagleReload_eventRef);
+        awpReloadInstance = RuntimeManager.CreateInstance(_3D_awpReload_eventRef);
         
         // Устанавливаем 3D атрибуты для обоих экземпляров
         Set3DAttributesForInstance(akReloadInstance, transform.position);
@@ -30,6 +33,9 @@ public class ReloadSoundsManager : MonoBehaviour
         
         if (deagleReloadInstance.isValid())
             Set3DAttributesForInstance(deagleReloadInstance, transform.position);
+        
+        if (awpReloadInstance.isValid())
+            Set3DAttributesForInstance(awpReloadInstance, transform.position);
     }
 
     public void PlayReload(int id) 
@@ -40,6 +46,7 @@ public class ReloadSoundsManager : MonoBehaviour
         // Обновляем позицию перед воспроизведением
         Set3DAttributesForInstance(akReloadInstance, transform.position);
         Set3DAttributesForInstance(deagleReloadInstance, transform.position);
+        Set3DAttributesForInstance(awpReloadInstance, transform.position);
 
         switch (id) 
         {
@@ -48,6 +55,9 @@ public class ReloadSoundsManager : MonoBehaviour
                 break;
             case 1:
                 currentPlayingInstance = deagleReloadInstance;
+                break;
+            case 2:
+                currentPlayingInstance = awpReloadInstance;
                 break;
         }
 
@@ -96,6 +106,12 @@ public class ReloadSoundsManager : MonoBehaviour
         {
             deagleReloadInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             deagleReloadInstance.release();
+        }
+        
+        if (awpReloadInstance.isValid())
+        {
+            awpReloadInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            awpReloadInstance.release();
         }
     }
 }

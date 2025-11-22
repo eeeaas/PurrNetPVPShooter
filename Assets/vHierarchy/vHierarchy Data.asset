@@ -16,6 +16,7 @@ MonoBehaviour:
     keys:
     - 99c9720ab356a0642a771bea13969a05
     - e5d8432c4bee5404eb37c0b920d383fb
+    - 1c96a63e3aa4dd643a37a4a18be77499
     values:
     - goDatas_byGlobalId:
         keys:
@@ -103,8 +104,52 @@ MonoBehaviour:
           iconNameOrGuid: 
           isIconRecursive: 0
           isColorRecursive: 0
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-2079214614-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-1290704872-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-637617413-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-1298518665-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-745617469-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-1533244199-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-761499343-0
+        - globalObjectIdString: GlobalObjectId_V1-2-1c96a63e3aa4dd643a37a4a18be77499-1434302124-0
+        values:
+        - colorIndex: 0
+          iconNameOrGuid: Settings Icon
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatCube
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatSphere
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatCylinder
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: PreMatQuad
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: Favorite
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 2
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
   bookmarks: []
   bookmarkedScenePaths:
   - Assets/PurrLobby/LobbyScenes/LobbySample.unity
   - Assets/Scenes/Dust2.unity
   - Assets/Scenes/Office.unity
+  - Assets/Scenes/Poligon.unity

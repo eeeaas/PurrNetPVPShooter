@@ -1,0 +1,696 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &10115506936765467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650880593136439312}
+  - component: {fileID: 555696035263312871}
+  m_Layer: 0
+  m_Name: Knife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1650880593136439312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10115506936765467}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5131242, y: 0.30651742, z: -0.592313, w: 0.5402925}
+  m_LocalPosition: {x: -0.011, y: 0.022, z: 0.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4525910566757527318}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -11.033, y: 73.09, z: -103.448}
+--- !u!114 &555696035263312871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10115506936765467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02be7b019543f34a949c99dd0271ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gun
+  _isSetup: 1
+  _prefabId: 0
+  _componentIndex: 12
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 0200000001000000
+  _directChildren: []
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
+  range: 2
+  damage: 5
+  fireRate: 0.45
+  automatic: 1
+  weightMultiplier: 1.2
+  gunIdForAnim: 2
+  isKnife: 1
+  headScale: 20
+  bodyScale: 5
+  armScale: 2
+  legScale: 1
+  recoilStrength: -0.3
+  recoilDuration: 0.5
+  recoilCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 9.753961
+      outSlope: 9.753961
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.101059355
+      value: 0.9857289
+      inSlope: 0.36842248
+      outSlope: 0.36842248
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1789005
+    - serializedVersion: 3
+      time: 0.534612
+      value: 0.40915477
+      inSlope: -1.8719726
+      outSlope: -1.8719726
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.19494587
+      outWeight: 0.106162526
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.87916917
+      outSlope: -0.87916917
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationAmount: 15
+  rotationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.436632
+      outSlope: 5.436632
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18297338
+      value: 0.99475896
+      inSlope: 1.4527634
+      outSlope: 1.4527634
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.10000219
+    - serializedVersion: 3
+      time: 0.595046
+      value: 1.079901
+      inSlope: -0.512334
+      outSlope: -0.512334
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.1164287
+      outWeight: 0.14919241
+    - serializedVersion: 3
+      time: 0.99884033
+      value: 0
+      inSlope: 0.056076612
+      outSlope: 0.056076612
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22191994
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yRecoilStrength: 6
+  xRecoilStrength: 12
+  recoilResetDelay: 0.4
+  recoilStrengthLEFTHAND: 0.4
+  recoilCurveLEFTHAND:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.19623971
+      value: 0.9857143
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.64812946
+      value: 0.7563288
+      inSlope: -1.719313
+      outSlope: -1.719313
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationAmountLEFTHAND: -75
+  rotationCurveLEFTHAND:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.19623971
+      value: 0.9857143
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.64812946
+      value: 0.7563288
+      inSlope: -1.719313
+      outSlope: -1.719313
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoilStrengthRIGHTHAND: 0.5
+  recoilCurveRIGHTHAND:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.20037383
+      value: 0.60132676
+      inSlope: 0.1707571
+      outSlope: 0.1707571
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15224485
+      outWeight: 0.059844583
+    - serializedVersion: 3
+      time: 0.32572088
+      value: 0.6046763
+      inSlope: -0.02324588
+      outSlope: -0.02324588
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.22811647
+      outWeight: 0.08803562
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationAmountRIGHTHANDX: -90
+  rotationCurveRIGHTHANDX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.20327401
+      value: 0.90922964
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7538918
+      value: 0.90347403
+      inSlope: -0.34079504
+      outSlope: -0.34079504
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.20426044
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationAmountRIGHTHANDY: -60
+  rotationCurveRIGHTHANDY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.12453866
+      value: 0.8981365
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8172884
+      value: 0.52180123
+      inSlope: -3.5849674
+      outSlope: -3.5849674
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14462587
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  rotationAmountRIGHTHANDZ: -60
+  rotationCurveRIGHTHANDZ:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.15627694
+      value: 0.8981365
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7468228
+      value: 0.870952
+      inSlope: -0.27388752
+      outSlope: -0.27388752
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08582251
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  knifeRightHandHitMultiplier: 3
+  rightHandFireRate: 0.3
+  cameraTransform: {fileID: 0}
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 179
+  muzzleFlash: {fileID: 0}
+  rightHandTarget: {fileID: 1539146122123138301}
+  leftHandTarget: {fileID: 0}
+  rightIkTarget: {fileID: 0}
+  leftIkTarget: {fileID: 0}
+  VrightIkTarget: {fileID: 0}
+  VleftIkTarget: {fileID: 0}
+  renderers:
+  - {fileID: 6251430422824173379}
+  environmentHitEffect: {fileID: 720877894002247469, guid: 848ab39d6ddef304482c46347d0dea6d, type: 3}
+  playerHitEffect: {fileID: 9085596012763502333, guid: 1330d39d5627e4945bd3bc547a1dfad6, type: 3}
+  environmentHitObj: {fileID: 1459416515103461942, guid: e3ab25472786aba4a9cbe6b4eeda39f2, type: 3}
+  rotationMimic: {fileID: 0}
+  bodyTransform: {fileID: 4525910566757527318}
+  weaponAnimator: {fileID: 0}
+  ammo: {fileID: 0}
+  reloadSoundsManager: {fileID: 0}
+  isReloading: 0
+  soundPlayerPrefab: {fileID: 6587713984118132562, guid: 3c111b6ddfc291242a047985dbf2adab, type: 3}
+  playerController: {fileID: 0}
+  surfController: {fileID: 0}
+  _2D_headShot_eventRef:
+    Guid:
+      Data1: -1960611779
+      Data2: 1078079036
+      Data3: 1483281819
+      Data4: -1975320904
+    Path: event:/Player/Hits/HeadShots_2D
+  _3D_headShot_eventRef:
+    Guid:
+      Data1: -1361833382
+      Data2: 1112845968
+      Data3: 271648187
+      Data4: 1407360239
+    Path: event:/Player/Hits/HeadShots_3D
+  _3D_bodyShot_eventRef:
+    Guid:
+      Data1: -408480674
+      Data2: 1079552504
+      Data3: 1470069153
+      Data4: 1764575826
+    Path: event:/Player/Hits/BodyHits_3D
+  _3D_knifeHitEnv_eventRef:
+    Guid:
+      Data1: -1782517212
+      Data2: 1255779819
+      Data3: -948669277
+      Data4: -1179310331
+    Path: event:/Guns/Hits/KnifeGroundHit_3D
+  _3D_bulletHitEnv_eventRef:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  recoilPattern:
+  - {x: 0.3, y: 2}
+  - {x: -0.2, y: 1.8}
+  - {x: 0.4, y: 1.6}
+  - {x: -0.4, y: 1.5}
+  - {x: 0.2, y: 1.4}
+  FromRecoilIndex: 2
+  _leftArmOrig: {fileID: 0}
+  _rightArmOrig: {fileID: 0}
+  _shotEmmiter: {fileID: 0}
+  isLookAnim: 0
+  isShoting: 0
+--- !u!1 &3248277780022817394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4525910566757527318}
+  m_Layer: 0
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4525910566757527318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248277780022817394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6251430422821292087}
+  - {fileID: 1539146122123138301}
+  - {fileID: 8385360687577877877}
+  m_Father: {fileID: 1650880593136439312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5110324140798537814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539146122123138301}
+  m_Layer: 0
+  m_Name: Pistol_Right_Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539146122123138301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5110324140798537814}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.06127166, y: -0.021433283, z: 0.8377235, w: -0.54222304}
+  m_LocalPosition: {x: 0.0116, y: 0.1558, z: -0.0655}
+  m_LocalScale: {x: 0.10000001, y: 0.099999994, z: 0.10000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4525910566757527318}
+  m_LocalEulerAnglesHint: {x: 5.875, y: -4.579, z: 245.591}
+--- !u!1 &8856870555378501426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8385360687577877877}
+  m_Layer: 0
+  m_Name: Pistol_Left_Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8385360687577877877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8856870555378501426}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.2515838, y: -0.71037275, z: 0.3025405, w: -0.5835627}
+  m_LocalPosition: {x: -0.014, y: 0.065, z: -0.128}
+  m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.09999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4525910566757527318}
+  m_LocalEulerAnglesHint: {x: -187.828, y: -82.11798, z: 134.174}
+--- !u!1001 &6251430422821171743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4525910566757527318}
+    m_Modifications:
+    - target: {fileID: 167048, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_Name
+      value: TrackerKnife
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9520490, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 167048, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8852068402844454574}
+  m_SourcePrefab: {fileID: 100100000, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+--- !u!1 &6251430422821076631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 167048, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+  m_PrefabInstance: {fileID: 6251430422821171743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8852068402844454574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251430422821076631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Animation.Rigging::UnityEngine.Animations.Rigging.BoneRenderer
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms: []
+--- !u!4 &6251430422821292087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 408104, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+  m_PrefabInstance: {fileID: 6251430422821171743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6251430422824173379 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13782364, guid: 6c2c88069d84c8e48b05c349815e2231, type: 3}
+  m_PrefabInstance: {fileID: 6251430422821171743}
+  m_PrefabAsset: {fileID: 0}

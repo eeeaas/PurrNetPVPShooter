@@ -72,6 +72,14 @@ public class HostPanel : MonoBehaviour
 
                         InstanceHandler.NetworkManager.sceneModule.LoadSceneAsync("Office");
                         break;
+                    case 2:
+                        if (MapsSync.Instance != null)
+                        {
+                            MapsSync.Instance.SetPendingMap(mapId, "Poligon");
+                        }
+
+                        InstanceHandler.NetworkManager.sceneModule.LoadSceneAsync("Poligon");
+                        break;
                 }
 
                 // Отправляем всем клиентам mapId через ObserversRpc

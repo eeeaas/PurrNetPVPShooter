@@ -266,14 +266,32 @@ public class PlayerController : NetworkBehaviour
         transform.Rotate(Vector3.up * mouseX);
     }*/
 
+    private int currentWeapon = 0;  
+    private int prevWeapon = 0; 
     private void HandleWeaponSwitching()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
             DrawWeapon(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
             DrawWeapon(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            DrawWeapon(2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            DrawWeapon(2); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            DrawWeapon(3);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            // Меняем на предыдущее оружие
+            int temp = currentWeapon;
+            DrawWeapon(prevWeapon);
+            prevWeapon = temp; // обновляем prevWeapon после свапа
+        }
     }
 
     private float tempWalkSpeed;
@@ -281,12 +299,16 @@ public class PlayerController : NetworkBehaviour
     private Gun currentGun;
     private void DrawWeapon(int weaponIndex)
     {
-        if (isDrawingWeapon) return; // уже достаем
-
-        isDrawingWeapon = true;
+        if (weaponIndex == currentWeapon) return;
+        
+        prevWeapon = currentWeapon;
+        currentWeapon = weaponIndex;
         
         // Меняем состояние оружия
         Gun curGun = weaponStates[weaponIndex].GetComponent<Gun>();
+        curGun.blockShoot = true;
+        
+        weaponStates[3].GetComponent<Gun>().DisableAWPZoom();
         stateMachine.SetState(weaponStates[weaponIndex]);
         recoilCamera.SetGun(curGun);
         weightMultiplier = curGun.weightMultiplier;
@@ -326,8 +348,8 @@ public class PlayerController : NetworkBehaviour
             case 0: weaponAnimator.SetTrigger("T_DrawPistol"); break;
             case 1: weaponAnimator.SetTrigger("T_DrawRifle"); break;
             case 2: weaponAnimator.SetTrigger("T_DrawKnife"); break;
+            case 3: weaponAnimator.SetTrigger("T_DrawAWP"); break;
         }
-
         // Флаг isDrawingWeapon сбросится в конце анимации через Animation Event
     }
 
@@ -337,9 +359,8 @@ public class PlayerController : NetworkBehaviour
     }
     
 // Этот метод вызываем через Animation Event в конце анимации достания
-    public void OnDrawWeaponComplete()
-    {
-        isDrawingWeapon = false;
+    public void OnDrawWeaponComplete() {
+        GetCurrentWeapon().blockShoot = false;
     }
 
     public void OnReloadComplete() {
@@ -350,6 +371,10 @@ public class PlayerController : NetworkBehaviour
 
     public Gun GetCurrentWeapon() {
         return currentGun;
+    }
+
+    public void SetSensitivityMultipluier(float sensitivity) {
+        playerAiming.sensMultiplier = sensitivity;
     }
 
 

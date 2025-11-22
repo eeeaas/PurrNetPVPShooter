@@ -6,7 +6,8 @@ public class PlayerAiming : MonoBehaviour
 	public Transform bodyTransform;
 	[SerializeField] private PlayerController playerController;
 
-	[Header("Sensitivity")]
+	[Header("Sensitivity")] 
+	public float sensMultiplier = 1f;
 	public float sensitivityMultiplier = 1f;
 	public float horizontalSensitivity = 1f;
 	public float verticalSensitivity   = 1f;
@@ -47,8 +48,8 @@ public class PlayerAiming : MonoBehaviour
 		DecayPunchAngle();
 
 		// Input
-		float xMovement = Input.GetAxisRaw("Mouse X") * horizontalSensitivity * sensitivityMultiplier;
-		float yMovement = -Input.GetAxisRaw("Mouse Y") * verticalSensitivity  * sensitivityMultiplier;
+		float xMovement = Input.GetAxisRaw("Mouse X") * horizontalSensitivity * sensitivityMultiplier * sensMultiplier;
+		float yMovement = -Input.GetAxisRaw("Mouse Y") * verticalSensitivity  * sensitivityMultiplier * sensMultiplier;
 
 		// Calculate real rotation from input
 		realRotation   = new Vector3(Mathf.Clamp(realRotation.x + yMovement, minYRotation, maxYRotation), realRotation.y + xMovement, realRotation.z);
